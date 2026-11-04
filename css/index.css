@@ -9,7 +9,25 @@ h1 {
 }
 
 .weather-info {
-    text-align: center;
     font-size: 1.2em;
     margin-top: 20px;
+}
+
+.emotional-class {
+  text-align: center;
+}
+
+.mood-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  
+}
+
+.mood-btn {
+  padding: 10px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color:rgb(188, 223, 211)
 }

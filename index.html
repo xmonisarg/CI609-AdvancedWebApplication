@@ -1,13 +1,28 @@
 <html>
-   <link rel="stylesheet" href="css/index.css">
-    <script src="js/weather.js" defer></script>
-    <link rel="php" href="weather.php">
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/index.css">
+<script src="js/weather.js" defer></script>
+<link rel="php" href="weather.php">
 
-    <head>
-        <title>Weather</title>
-    </head>
-    <body>
-        <h1>Current Weather</h1>
-        <p class="weather-info" id="weather-info">Loading weather data...</p>
-    </body>
-    </html>
+<head>
+    <title>Mind App</title>
+</head>
+
+<body>
+    <h1>Mind App</h1>
+    <p class="weather-info">Current Weather:</p>
+    <p class="weather-info" id="weather-info">Loading weather data...</p>
+    <div class="emotional-class">
+  <p class="feeling-question">How are you feeling today?</p>
+
+  <div class="mood-buttons">
+    <button class="mood-btn" data-mood="happy">😊 Happy</button>
+    <button class="mood-btn" data-mood="calm">😌 Calm</button>
+    <button class="mood-btn" data-mood="okay">😐 Okay</button>
+    <button class="mood-btn" data-mood="sad">😢 Sad</button>
+    <button class="mood-btn" data-mood="anxious">😰 Anxious</button>
+  </div>
+</div>
+</body>
+
+</html>
