@@ -3,6 +3,8 @@ header('Content-Type: application/json; charset=utf-8');
 
 $apiKey = '04b568d80c6d3a7f87b4f2c4b46def6f';
 
+// Brighton coordinates as default
+
 $lat = isset($_GET['lat']) ? $_GET['lat'] : 51.5074;
 $lon = isset($_GET['lon']) ? $_GET['lon'] : -0.1278;
 
@@ -17,6 +19,8 @@ $url = "https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&units=
 $context = stream_context_create(array('http' => array('ignore_errors' => true)));
 $response = @file_get_contents($url, false, $context);
 
+// If the response is false, it will display an error message.
+
 if ($response === false) {
     $err = error_get_last();
     http_response_code(500);
@@ -26,6 +30,8 @@ if ($response === false) {
     ));
     exit;
 }
+
+// JSON Response into weather display
 
 $data = json_decode($response, true);
 
