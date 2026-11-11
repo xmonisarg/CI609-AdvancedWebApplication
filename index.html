@@ -1,25 +1,29 @@
+<!DOCTYPE html>
 <html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="css/index.css">
-<script src="js/weather.js" defer></script>
-<link rel="php" href="weather.php">
-
 <head>
+  <meta charset="utf-8">
   <title>Mind App</title>
+  <link rel="stylesheet" href="css/index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="js/encryption.js" defer></script>
+  <script src="js/weather.js" defer></script>
+  <script src="js/app.js" defer></script>
 </head>
 
 <body>
+
   <h1>Mind App</h1>
   <center>
     <div class="pin-login">
       <label for="pin">Enter PIN:</label>
       <br>
       <input type="password" id="pin" placeholder="Enter your PIN">
-      <br>
-      <br>
+      <Br><br>
       <button class="mood-btn" id="login-btn">Login</button>
+      <p id="pin-message"></p>
     </div>
   </center>
+
   <div id="mood-app" hidden>
     <p class="weather-info">Current Weather:</p>
     <p class="weather-info" id="weather-info">Loading weather data...</p>
@@ -27,24 +31,27 @@
       <p class="feeling-question">How are you feeling today?</p>
       <p class="feeling-question">Log & Describe your mood:</p>
 
-
-    <div class="mood-log">
-      <form id="mood-form" class="mood-form">
-        <br>
-        <div class="mood-buttons">
-          <button class="mood-btn" data-mood="happy">😊 Happy</button>
-          <button class="mood-btn" data-mood="calm">😌 Calm</button>
-          <button class="mood-btn" data-mood="okay">😐 Okay</button>
-          <button class="mood-btn" data-mood="sad">😢 Sad</button>
-          <button class="mood-btn" data-mood="anxious">😰 Anxious</button>
-        </div>
-        <input type="text" id="mood-log" placeholder="Describe your mood...">
-        <button class="mood-btn" type="submit">Save</button>
-      </form>
-
+      <div class="mood-log">
+        <form id="mood-form" class="mood-form">
+          <br>
+          <div class="mood-buttons">
+            <button type="button" class="mood-btn" data-mood="happy">😊 Happy</button>
+            <button type="button" class="mood-btn" data-mood="calm">😌 Calm</button>
+            <button type="button" class="mood-btn" data-mood="okay">😐 Okay</button>
+            <button type="button" class="mood-btn" data-mood="sad">😢 Sad</button>
+            <button type="button" class="mood-btn" data-mood="anxious">😰 Anxious</button>
+          </div>
+          <input type="text" id="mood-log" placeholder="Describe your mood...">
+          <button class="mood-btn" type="submit">Save</button>
+        </form>
+      </div>
     </div>
+    <h3>Previous Mood Entries</h3>
+
+    <ul id="entries"></ul>
+
   </div>
-  </div>
+
 </body>
 
 </html>
