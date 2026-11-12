@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Mind App</title>
@@ -11,49 +12,45 @@
 </head>
 
 <body>
-<div class="background">
-  <h1>Mind App</h1>
-  <center>
-    <div class="pin-login">
-      <label for="pin">Enter PIN:</label>
-      <br>
-      <input type="password" id="pin" placeholder="Enter your PIN">
-      <Br><br>
-      <button class="mood-btn" id="login-btn">Login</button>
-      <p id="pin-message"></p>
-    </div>
-  </center>
-
-  <div id="mood-app" hidden>
+  <div class="background">
+    <h1>Mind App</h1>
     <center>
-    <p class="weather-info">Current Weather:</p>
-    <p class="weather-info" id="weather-info">Loading weather data...</p>
-    <div class="emotional-class">
-      <p class="feeling-question">How are you feeling today?</p>
-      <p class="feeling-question">Log & Describe your mood:</p>
-      </center>
-      
-      <div class="mood-log">
-        <form id="mood-form" class="mood-form">
-          <br>
-          <div class="mood-buttons">
-            <button type="button" class="mood-btn" data-mood="happy">😊 Happy</button>
-            <button type="button" class="mood-btn" data-mood="calm">😌 Calm</button>
-            <button type="button" class="mood-btn" data-mood="okay">😐 Okay</button>
-            <button type="button" class="mood-btn" data-mood="sad">😢 Sad</button>
-            <button type="button" class="mood-btn" data-mood="anxious">😰 Anxious</button>
-          </div>
-          <input type="text" id="mood-log" placeholder="Describe your mood...">
-          <button class="mood-btn" type="submit">Save</button>
-        </form>
+      <div class="pin-login">
+        <label for="pin">Enter PIN:</label>
+        <br>
+        <input type="password" id="pin" placeholder="Enter your PIN">
+        <Br><br>
+        <button class="mood-btn" id="login-btn">Login</button>
+        <p id="pin-message"></p>
       </div>
+    </center>
+
+    <div id="mood-app" hidden>
+      <p class="weather-info">Current Weather:</p>
+      <p class="weather-info" id="weather-info">Loading weather data...</p>
+
+      <div class="emotional-class">
+        <p class="feeling-question">How are you feeling today?</p>
+        <p class="feeling-question">Log & Describe your mood:</p>
+        <div class="mood-log">
+          <form id="mood-form" class="mood-form">
+            <br>
+            <div class="mood-buttons">
+              <button type="button" class="mood-btn" data-mood="happy">😊 Happy</button>
+              <button type="button" class="mood-btn" data-mood="calm">😌 Calm</button>
+              <button type="button" class="mood-btn" data-mood="okay">😐 Okay</button>
+              <button type="button" class="mood-btn" data-mood="sad">😢 Sad</button>
+              <button type="button" class="mood-btn" data-mood="anxious">😰 Anxious</button>
+            </div>
+            <input type="text" id="mood-log" placeholder="Describe your mood...">
+            <button class="mood-btn" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+
+      <h3>Previous Mood Entries</h3>
+      <ul id="entries"></ul>
     </div>
-    <h3>Previous Mood Entries</h3>
-
-    <ul id="entries"></ul>
-
-  </div>
-</div>
 </body>
 
 </html>
