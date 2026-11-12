@@ -1,7 +1,8 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
 
-$apiKey = '04b568d80c6d3a7f87b4f2c4b46def6f';
+$config = require __DIR__ . '/config.php';
+$apiKey = $config['openweather_key'];
 
 // Fetches weather
 
