@@ -3,10 +3,10 @@ header('Content-Type: application/json; charset=utf-8');
 
 $apiKey = '04b568d80c6d3a7f87b4f2c4b46def6f';
 
-// Brighton coordinates as default
+// Fetches weather
 
-$lat = isset($_GET['lat']) ? $_GET['lat'] : 51.5074;
-$lon = isset($_GET['lon']) ? $_GET['lon'] : -0.1278;
+$lat = isset($_GET['lat']) ? $_GET['lat'] : '' ;
+$lon = isset($_GET['lon']) ? $_GET['lon'] : '' ;
 
 if (!is_numeric($lat) || !is_numeric($lon)) {
     http_response_code(400);

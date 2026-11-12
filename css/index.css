@@ -1,7 +1,16 @@
 body {
-    background-color:rgb(193, 255, 234);
     font-family: Arial, sans-serif;
     font-size: 1.2em;
+}
+
+.background {
+  min-height: 100vh;
+    background: #49dbee;
+    background: linear-gradient(90deg, rgb(73, 150, 238) 0%, rgb(80, 168, 202) 37%, rgb(188, 254, 255) 100%);
+    padding: 5%;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -10,6 +19,7 @@ h1 {
 }
 
 .weather-info {
+  font-family: ;
     font-size: 1.2em;
     margin-top: 20px;
 }
@@ -30,7 +40,7 @@ h1 {
   padding: 10px 16px;
   font-size: 1rem;
   cursor: pointer;
-  background-color:rgb(188, 223, 211)
+  background-color:rgb(188, 215, 223)
 }
 
 .mood-log {
