@@ -1,0 +1,21 @@
+
+## GET Methods
+
+### London Coordinates 
+GET https://msp53.brighton.domains/ci609/assignment1/weather.php?lat=50.8225&lon=-0.1372 HTTP/1.1
+
+
+### Brighton Coordinates
+
+GET https://msp53.brighton.domains/ci609/assignment1/weather.php?lat=50.8284&lon=-0.1395 HTTP/1.1
+
+### Invalid Coordinates
+
+GET https://msp53.brighton.domains/ci609/assignment1/weather.php HTTP/1.1
+
+## POST Methods
+
+POST https://msp53.brighton.domains/ci609/assignment1/weather.php HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+lat=50.8225&lon=-0.1372
