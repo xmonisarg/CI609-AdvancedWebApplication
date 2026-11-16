@@ -1,4 +1,10 @@
 // GET Methods
 
-GET /weather.php?lat=40.7128&lon=-74.0060 HTTP/1.1
+// London Coordinates 
+GET https://msp53.brighton.domains/ci609/assignment1/weather.php?lat=50.8225&lon=-0.1372
 
+// Brighton Coordinates
+GET https://msp53.brighton.domains/ci609/assignment1/weather.php?lat=50.8284&lon=-0.1395
+
+// Invalid Coordinates
+GET https://msp53.brighton.domains/ci609/assignment1/weather.php
